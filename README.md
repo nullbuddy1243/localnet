@@ -1,12 +1,17 @@
 local eth
 
 foundry docs: [foundrybook](https://book.getfoundry.sh/)
+sol scripting: [boo](https://book.getfoundry.sh/tutorials/solidity-scripting)
+
+env
 
 ```env
 RINKEBY_RPC_URL=
 PRIVATE_KEY=
 ETHERSCAN_KEY=
 ```
+
+start
 
 ```bash
 $ anvil -a 10 --hardfork latest  -p 7070
@@ -24,6 +29,26 @@ $ anvil -a 10 --hardfork latest  -p 7070
 
 ```
 
+edit .sol then
+
 ```bash
-$ forge script script/NFT.s.sol:MyScript --rpc-url $RINKEBY_RPC_URL --private-key $PRIVATE_KEY --broadcast --verify -vvvv --etherscan-api-key $ETHERSCAN_KEY
+
+forge build
+
+... compiler build success
+
 ```
+
+run script
+
+```bash
+
+# To load the variables in the .env file
+source .env
+
+# To deploy and verify our contract
+forge script script/NFT.s.sol:MyScript --rpc-url $RINKEBY_RPC_URL  --private-key $PRIVATE_KEY --broadcast --verify --etherscan-api-key $ETHERSCAN_KEY -vvvv
+
+```
+
+:sunglasses: :v:
