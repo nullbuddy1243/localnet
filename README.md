@@ -1,5 +1,6 @@
 local eth
 
+[foundry gh](https://github.com/foundry-rs/foundry)
 foundry docs: [foundrybook](https://book.getfoundry.sh/)
 sol scripting: [boo](https://book.getfoundry.sh/tutorials/solidity-scripting)
 
